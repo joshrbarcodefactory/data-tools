@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>Selects</title>
+    <%- include ('partials/head') %>
+
+</head>
+
+<body>
+    <header>
+        <%- include ('partials/header') %>
+    </header>
+    <div class="container">
+        <button id="backToIndexBtn" class="btn btn-primary">Back</button>
+        <table class="table">
+            <thead>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Start Date</th>
+                <th>Due Date</th>
+            </thead>
+            <tbody>
+                <% for(let i=0; i < data.length; i++) { 
+                    data.CurrentTodo = data[i];
+                    console.log(JSON.stringify(data));
+                    %>
+                    <tr>
+                        <%- include ('partials/todoTableRow') %>
+                    </tr>
+
+                    <% }  %>
+            </tbody>
+        </table>
+
+
+
+    </div>
+
+    <script src="/javascripts/selectsHandler.js"></script>
+
+
+    <footer style="margin-top:0;">
+        <%- include ('partials/footer') %>
+    </footer>
+</body>
+
+</html>
