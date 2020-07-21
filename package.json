@@ -22,16 +22,13 @@
     "config": {
         "forge": {
             "packagerConfig": {},
-            "makers": [
-                {
-                    "name": "@electron-forge/maker-squirrel",
-                    "config": {
-                        "name": "data_tools"
-                    }
+            "makers": [{
+                "name": "@electron-forge/maker-squirrel",
+                "config": {
+                    "name": "data_tools"
                 }
-            ],
-            "publishers": [
-                {
+            }],
+            "publishers": [{
                     "name": "@electron-forge/publisher-s3",
                     "config": {
                         "accessKeyId": "AKIAQBB7E3PL5235LMFW",
@@ -43,7 +40,12 @@
                 },
                 {
                     "name": "@electron-forge/publisher-github",
-                    "config": {}
+                    "config": {
+                        "repository": {
+                            "owner": "joshrbarcodefactory",
+                            "name": ""
+                        }
+                    }
                 }
             ]
         }
